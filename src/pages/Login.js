@@ -72,9 +72,9 @@ const Login = () => {
               fullWidth 
               sx={{ mt: 2, fontWeight: 'bold' }}
             >
-              Login
+              Login 
             </Button>
-             <Typography mt={2}>Dont have an account? <a href="/register">Sign Up</a></Typography>
+             <Typography mt={2}>Don't have an account? <a href="/register">Sign Up</a></Typography>
           
           </form>
         </CardContent>
