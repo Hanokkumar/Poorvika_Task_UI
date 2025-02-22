@@ -14,8 +14,11 @@ const Login = () => {
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://localhost:3000/auth/login', { username, password });
+      const response = await axios.post('http://localhost:3001/auth/login',
+       { username, password });
+
       Cookies.set('token', response.data.token, { expires: 1 }); 
+      
       if(response.data.role==='Admin'){
         navigate('/dashboard');
       }else{

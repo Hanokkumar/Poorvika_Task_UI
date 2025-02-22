@@ -19,7 +19,7 @@ const Dashboard = () => {
       return;
     }
 
-    axios.get('http://localhost:3000/admin', { headers: { Authorization: `Bearer ${token}` } })
+    axios.get('http://localhost:3001/admin', { headers: { Authorization: `Bearer ${token}` } })
       .then(res => setMessage(res.data.message))
       .catch(() => {
         Cookies.remove('token');

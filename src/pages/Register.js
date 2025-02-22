@@ -16,9 +16,17 @@ function Register() {
     const handleRegister = async (e) => {
         e.preventDefault();
         try {
-            await axios.post('http://localhost:3000/auth/register', { username, password, role });
-            setSuccess('Registration successful! Redirecting to login...');
-            setTimeout(() => navigate('/login'), 2000);
+            await axios.post(
+                'http://localhost:3001/auth/register',
+                { username, password, role },
+                {
+                  headers: {
+                    'Content-Type': 'application/json',
+                  },
+                }
+              );
+              setSuccess('Registration successful! Redirecting to login...');
+              setTimeout(() => navigate('/login'), 2000);
         } catch (err) {
             setError(err.response?.data?.message || 'Registration failed');
         }
