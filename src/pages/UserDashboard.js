@@ -2,7 +2,7 @@ import React, {  useState } from 'react';
 import Cookies from 'js-cookie';
 import { useNavigate } from 'react-router-dom';
 import {  Box, CssBaseline, Typography, Button,} from '@mui/material';
-import BgImage from '../assets/UserDashboard.jpg'; // Import a background image
+import BgImage from '../assets/UserDashboard.jpg'; 
 
 
 const Dashboard = () => {
