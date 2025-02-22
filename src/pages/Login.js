@@ -74,6 +74,8 @@ const Login = () => {
             >
               Login
             </Button>
+             <Typography mt={2}>Dont have an account? <a href="/register">Sign Up</a></Typography>
+          
           </form>
         </CardContent>
       </Card>
